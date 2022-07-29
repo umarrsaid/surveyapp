@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>IFF | Login</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="IFF" name="description" />
+        <meta content="" name="author" />
+
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/global/css/components.min.css')}}" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="{{URL::asset('assets/global/css/plugins.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/pages/css/login-2.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/pages/css/custom.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" type="image/png" href="favicon.ico" /> </head>
+    <body class="login">
+        <div class="logo">
+            <a href="/">
+                <img class="iff" src="{{URL::asset('assets/pages/img/iff-logo-large.png')}}" alt="" /> </a>
+        </div>
+
+        <div class="content"">
+            <form class="login-form" action="#" method="post" id="form-login">
+                <div class="form-title text-center">
+                    <span class="form-title">Selamat Datang.</span>
+                    <span class="form-subtitle">Silakan login terlebih dahulu</span>
+                </div>
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button>
+                    <span> Nama user dan password tidak boleh kosong </span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label visible-ie8 visible-ie9">Nama user</label>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Nama user" name="nama" id="nama" value="admin_dev" /> </div>
+                <div class="form-group">
+                    <label class="control-label visible-ie8 visible-ie9">Password</label>
+                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" id="password" value="Admin@2019" /> </div>
+                <div class="form-actions">
+                    <button type="submit" id="btn-login" class="btn proses btn-block fn16 uppercase"><i class="fa fa-unlock"> </i> L o g i n</button>
+                </div>
+                <div class="form-actions">
+                    <div class="pull-left">
+                        <label class="rememberme mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="remember" value="1" /> Ingat saya
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="pull-right forget-password-block">
+                        <a href="javascript:;" id="forget-password" class="forget-password">Lupa Password ?</a>
+                    </div>
+                </div>
+            </form>
+
+            <form class="forget-form" action="" method="post">
+                <div class="form-title">
+                    <span class="form-title">Lupa Password ?</span>
+                    <span class="form-subtitle">Isikan email anda untuk me-reset password.</span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
+                <div class="form-actions">
+                    <button type="button" id="back-btn" class="btn btn-default">Kembali</button>
+                    <button type="submit" class="btn proses uppercase pull-right">Proses</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="copyright"> 2019 © PT Essence Indonesia, International Flavors & Fragrances (IFF).</div>
+        <script src="{{URL::asset('assets/global/plugins/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/js.cookie.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{URL::asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js')}}" type="text/javascript"></script>
+        <script src="{{URL::asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{URL::asset('assets/global/scripts/app.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{URL::asset('assets/pages/scripts/login.min.js')}}" type="text/javascript"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+<script>
+    // $(document).on('ready',function(){
+        // $('form').on('submit',function(e) {
+        $('#btn-login').on('click',function(e) {
+            e.preventDefault();
+            // console.log('tes');
+            $.ajaxSetup({
+                  headers: {
+                    // 'accept': 'application/json',
+                    // 'Content-Type': 'application/json'
+                }
+            });
+            $.ajax({
+                url: '/api/auth/login',
+                type: 'POST',
+                dataType:'json',     
+                // data: $('#form-login').serialize() + "&type=web",       
+                data: {nama:$('#nama').val(),password:$('#password').val(),type:'web'},       
+                success: function(res, textStatus, xhr) {
+                                    window.location.href = "/";
+                //     if(xhr.status == 200) {
+                        
+                       
+                //          $.ajaxSetup({
+                //               headers: {
+                //                 'Authorization' : 'Bearer '+user,
+                //             }
+                //         });
+                //         $.ajax({
+                //             type: "GET",
+                //             url: '/user',
+                //             contentType: "application/json; charset=utf-8",
+                //             dataType: "json",
+                //             success: function(data, textStatus, xhr) {
+                //                 // console.log(xhr);
+                //                 if (data.redirect) {
+                //                     // data.redirect contains the string URL to redirect to
+                //                     window.location.href = "/home";
+                //                 }
+                //                  // window.location = data.redirect;
+                //                 // window.location = "/home";
+                //             }
+                //         });
+
+
+                // // success: function(json) {
+                //         // console.log(res);
+                //     }
+                },
+                error: function(xhr, textStatus, errorThrown){
+                    // console.log(xhr.status);
+                    if (xhr.status == 401) {
+                        swal({
+                          title: "Gagal!",
+                          text: "Gagal Login!",
+                          icon: "error",
+                          button: "Ok!",
+                        });
+                    }
+
+                }
+        });
+        })
+    </script>
+
+</html>
